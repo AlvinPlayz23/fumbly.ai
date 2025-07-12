@@ -1,0 +1,97 @@
+<!-- Lovable.dev Landing Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lovable.dev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.0.0/dist/flowbite.min.js"></script>
+  <style>
+    /* Temporary inline styles - will be extracted to theme file in next step */
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(to bottom right, #23004D, #D53F8C);
+    }
+  </style>
+</head>
+<body class="relative flex flex-col items-center justify-center text-center">
+
+  <!-- Header -->
+  <header class="absolute top-0 left-0 w-full bg-black/50 backdrop-blur-sm flex items-center justify-between p-4">
+    <!-- Logo placeholder - should be an SVG icon + text -->
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl font-bold">
+        <lucide-heart class="inline w-6 h-6"></lucide-heart> Lovable
+      </span>
+    </div>
+    <!-- Navigation buttons -->
+    <div class="space-x-4">
+      <button class="text-white">Log in</button>
+      <button class="px-4 py-2 text-white bg-white/10 rounded-full backdrop-blur md:bg-white md:text-black">Sign up</button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="flex flex-col items-center space-y-8">
+    <!-- Heading group -->
+    <div class="space-y-2">
+      <h1 class="text-4xl font-bold text-white">Build something
+        <span class="text-gradient">
+          <lucide-heart class="inline w-6 h-6"></lucide-heart> Lovable
+        </span>
+      </h1>
+      <p class="text-lg text-white/80">
+        Idea to app in seconds, with your personal full stack engineer
+      </p>
+    </div>
+
+    <!-- Input group with attach button, public toggle, and send icon -->
+    <div class="relative w-full max-w-2xl">
+      <div class="relative rounded-lg overflow-hidden">
+        <input type="text" class="w-full p-4 text-lg border-none outline-none bg-black/70 text-white placeholder-white/50 backdrop-blur-sm" placeholder="Ask Lovable to create">
+        <!-- Input attachments/toggles/buttons -->
+        <div class="absolute bottom-0 right-0 flex items-center space-x-2">
+          <button class="p-2 bg-black/50 backdrop-blur-sm hover:bg-black/70 transition">
+            <lucide-paperclip class="w-5 h-5 text-white"></lucide-paperclip>
+          </button>
+          <div class="p-2 bg-black/50 backdrop-blur-sm flex items-center space-x-1 text-xs text-white">
+            <input type="checkbox" id="public-toggle" class="rounded">
+            <label for="public-toggle">Public</label>
+          </div>
+          <button class="p-2 rounded-full bg-teal-500 hover:bg-teal-600 transition">
+            <lucide-arrow-right class="w-5 h-5 text-white"></lucide-arrow-right>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Suggested Action Buttons -->
+  <div class="mt-12 space-x-4">
+    <button class="px-6 py-3 text-white bg-black/40 rounded-full backdrop-blur-sm hover:bg-black/60 transition">
+      <lucide-zap class="w-5 h-5 inline mr-2"></lucide-zap> Task manager
+    </button>
+    <button class="px-6 py-3 text-white bg-black/40 rounded-full backdrop-blur-sm hover:bg-black/60 transition">
+      <lucide-bar-chart-2 class="w-5 h-5 inline mr-2"></lucide-bar-chart-2> Social media dashboard
+    </button>
+    <button class="px-6 py-3 text-white bg-black/40 rounded-full backdrop-blur-sm hover:bg-black/60 transition">
+      <lucide-weight class="w-5 h-5 inline mr-2"></lucide-weight> Fitness tracker
+    </button>
+    <button class="px-6 py-3 text-white bg-black/40 rounded-full backdrop-blur-sm hover:bg-black/60 transition">
+      <lucide-presentation class="w-5 h-5 inline mr-2"></lucide-presentation> Slidev presentation
+    </button>
+  </div>
+
+  <script>
+    // Add temporary JS for testing
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+    document.getElementById('dark-toggle').addEventListener('click', toggleDarkMode);
+  </script>
+</body>
+</html>

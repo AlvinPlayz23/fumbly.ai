@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mockup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-md">
+            <div class="p-6">
+                <h1 class="text-2xl font-bold text-gray-800">MyFinCorp</h1>
+            </div>
+            <nav class="mt-6">
+                <a href="#" class="block px-6 py-3 text-gray-600 hover:bg-gray-200">Home</a>
+                <a href="#" class="block px-6 py-3 text-gray-600 hover:bg-gray-200">Payments</a>
+                <a href="#" class="block px-6 py-3 text-gray-600 hover:bg-gray-200">Customers</a>
+                <a href="#" class="block px-6 py-3 text-gray-600 hover:bg-gray-200">Reports</a>
+                <a href="#" class="block px-6 py-3 text-gray-600 hover:bg-gray-200">Settings</a>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex-1 p-10">
+            <h2 class="text-3xl font-bold text-gray-800">Dashboard</h2>
+
+            <!-- Stats cards -->
+            <div class="grid grid-cols-1 gap-6 mt-6 md:grid-cols-2 lg:grid-cols-4">
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-lg font-medium text-gray-600">Today's Volume</h3>
+                    <p class="mt-2 text-3xl font-bold text-gray-800">$12,345</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-lg font-medium text-gray-600">Last 7 Days</h3>
+                    <p class="mt-2 text-3xl font-bold text-gray-800">$89,123</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-lg font-medium text-gray-600">Last 30 Days</h3>
+                    <p class="mt-2 text-3xl font-bold text-gray-800">$345,678</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-lg font-medium text-gray-600">Total Customers</h3>
+                    <p class="mt-2 text-3xl font-bold text-gray-800">1,234</p>
+                </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="mt-8 bg-white rounded-lg shadow-md">
+                <div class="p-6">
+                    <h3 class="text-lg font-medium text-gray-600">Transaction Volume</h3>
+                    <div class="mt-4">
+                        <svg class="w-full h-64" viewBox="0 0 400 200">
+                            <polyline points="0,150 50,100 100,120 150,80 200,100 250,60 300,80 350,40 400,60" fill="none" stroke="#4a5568" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent transactions -->
+            <div class="mt-8 bg-white rounded-lg shadow-md">
+                <div class="p-6">
+                    <h3 class="text-lg font-medium text-gray-600">Recent Transactions</h3>
+                    <table class="w-full mt-4">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 text-left text-gray-600">Customer</th>
+                                <th class="px-4 py-2 text-left text-gray-600">Amount</th>
+                                <th class="px-4 py-2 text-left text-gray-600">Status</th>
+                                <th class="px-4 py-2 text-left text-gray-600">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t">
+                                <td class="px-4 py-2">John Doe</td>
+                                <td class="px-4 py-2">$100.00</td>
+                                <td class="px-4 py-2 text-green-500">Paid</td>
+                                <td class="px-4 py-2">2025-07-11</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="px-4 py-2">Jane Smith</td>
+                                <td class="px-4 py-2">$250.00</td>
+                                <td class="px-4 py-2 text-green-500">Paid</td>
+                                <td class="px-4 py-2">2025-07-11</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="px-4 py-2">Mike Johnson</td>
+                                <td class="px-4 py-2">$50.00</td>
+                                <td class="px-4 py-2 text-yellow-500">Pending</td>
+                                <td class="px-4 py-2">2025-07-10</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="px-4 py-2">Sarah Williams</td>
+                                <td class="px-4 py-2">$300.00</td>
+                                <td class="px-4 py-2 text-red-500">Failed</td>
+                                <td class="px-4 py-2">2025-07-09</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
